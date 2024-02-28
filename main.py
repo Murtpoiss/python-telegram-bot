@@ -10,7 +10,7 @@ print('Bot started...')
 
 #COMMANDS
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Welcome! For videos go to https://www.murtpoiss.ee/videos/')
+    await update.message.reply_text('Welcome! For videos go to ?????????')
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('To get help ask @????????? !')
