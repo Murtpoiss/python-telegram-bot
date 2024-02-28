@@ -5,8 +5,16 @@ from typing import Final
 
 TOKEN: Final = '????? INSERT YOUR API KEY ?????'
 BOT_USERNAME: Final = '@?????????'
+IMAGE: Final = 'https://?????????'
 
 print('Bot started...')
+
+"""
+start - Starts the Bot
+help - Get help
+custom - Custom command
+product - Look at what you get
+"""
 
 #COMMANDS
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -33,6 +41,10 @@ def handle_response(text: str) -> str:
         now = datetime.now()
         date_time = now.strftime('%d/%m/%y, %H:%M:%S')
         return str(date_time)
+
+    #SENDING AN IMAGE
+    if 'product' in processed:
+        return IMAGE
 
     return 'I dont have the answer to that but you can use /help'
 
